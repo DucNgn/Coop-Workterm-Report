@@ -1,5 +1,7 @@
 \documentclass[a4paper]{article}
 
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \usepackage{enumitem}
@@ -21,7 +23,18 @@
 \date{Fall 2020}
 
 \begin{document}
-\maketitle
+\makeatletter
+    \begin{titlepage}
+        \begin{center}
+            {\@title }\\[2ex] 
+            {\@author}\\[20ex] 
+            \includegraphics[scale=0.1]{ericsson}\\[50ex]
+            {\@date}
+        \end{center}
+    \end{titlepage}
+\makeatother
+\thispagestyle{empty}
+\newpage
 
 \newpage
 \tableofcontents
